@@ -1,0 +1,169 @@
+.navbar-white {
+    background-color: #0095d4;
+}
+
+[class*=sidebar-dark] .brand-link{
+	border-bottom: 1px solid #fff;
+}
+
+.navbar-light .navbar-nav .nav-link{
+	color: rgba(255, 255, 255, 0.8);
+}
+
+[class*=sidebar-dark] .user-panel{
+	border-bottom: 1px solid #fff;
+}
+
+[class*=sidebar-dark-] {
+    background-color: #0095d4;
+}
+
+[class*=sidebar-dark-] .sidebar a{
+	color:#fff;
+}
+
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link {
+    color: #ffffff;
+}
+
+/*Multimedia*/
+.sedapal-multimedia-item{
+	display: block;
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	margin: 7.5px 0;
+	background-color: #00000047;
+}
+
+.sedapal-multimedia-item.archivo{
+	background-image: url(../img/document.png);
+	background-size: auto;
+}
+
+.sedapal-multimedia-item.archivo span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+.dropzone {
+    border: 2px dashed #0095d4;
+    border-radius: 5px;
+    background: white;
+}
+
+.sedapal-imagen-destacada-elegida{
+	display: block;
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	border: 2px dashed #0095d4;
+}
+
+.sedapal-elegir-multimedia{
+	display: block;
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;	
+}
+
+.sedapal-elegir-multimedia-contenedor{
+	width: 100%;
+}
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + .sedapal-elegir-multimedia {
+  cursor: pointer;
+}
+
+[type=radio]:checked + .sedapal-elegir-multimedia {
+  box-shadow: 0 0 0pt 2pt #0095d4;
+}
+
+/*Banner*/
+.sedapal-img-banners{
+	display: block;
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-color: #00000047;
+}
+
+.sedapal-img-banner-item{
+	display: block;
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-color: #00000047;
+}
+
+/* Menu */
+.sedapal-medu-editable .sortableLists.list-group .list-group-item.pr-0{
+	padding-right: 1.25rem !important;
+}
+
+/* Tagify */
+.tagify__tag{
+}
+
+.tagify--outside{
+    border: 0;
+}
+
+.tagify--outside .tagify__input{
+  order: -1;
+  flex: 100%;
+  border: 1px solid var(--tags-border-color);
+  margin-bottom: 1em;
+  transition: .1s;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  width: 100%;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.tagify--outside .tagify__input:hover{ border-color:var(--tags-hover-border-color); }
+.tagify--outside.tagify--focus .tagify__input{
+  transition:0s;
+  border-color: var(--tags-focus-border-color);
+}
