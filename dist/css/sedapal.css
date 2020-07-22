@@ -65,14 +65,16 @@
 .sedapal-imagen-destacada-elegida{
 	display: block;
 	position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 5px;
 	border: 2px dashed #0095d4;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sedapal-elegir-multimedia{

@@ -9,7 +9,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <!-- Página de CMS que se esta editando -->
-  <title>Sepadal | Noticias</title>
+  <title>Sepadal | Enlaces de inicio</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -74,15 +74,15 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="noticias.html" class="nav-link active">
+          <li class="nav-item has-treeview">
+            <a href="noticias.html" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>Noticias</p>
               <i class="right fas fa-angle-left"></i>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="noticias.html" class="nav-link active">
+                <a href="noticias.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista de Noticias</p>
                 </a>
@@ -205,7 +205,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-sliders-h"></i>
               <p>
@@ -215,7 +215,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Enlaces de inicio</p>
                 </a>
@@ -266,12 +266,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Noticias</h1>
+            <h1 class="m-0 text-dark">Enlaces de Inicio</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Escritorio</a></li>
-              <li class="breadcrumb-item active">Noticias</li>
+              <li class="breadcrumb-item active">Enlaces de Inicio</li>
             </ol>
           </div><!-- /.col -->       
         </div><!-- /.row -->
@@ -289,21 +289,18 @@
               <div class="card-body">
                 <form>
                   <div class="form-row">
-                    <div class="form-group col-md-2 mb-0">
-                      <select class="custom-select">
-                        <option value="">Filtrar por categoría</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-6 mb-0">
-                      <input type="text" class="form-control" placeholder="¿Que noticia buscas?">
-                    </div>
-                    <div class="form-group col-md-2 mb-0">
-                      <select class="custom-select">
-                        <option value="">Estado</option>
-                      </select>
+                    <div class="form-group row col-md-10 mb-0">
+                      <label class="m-0 col-md-4 col-form-label">¿Que menu deseas editar?</label>
+                      <div class="col-md-8">
+                        <select class="custom-select">
+                          <option value="">Accesos rapidos</option>
+                          <option value="">Nuestros servicios</option>
+                          <option value="">Enlaces externos</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="form-group col-md-2 mb-0">
-                      <button type="submit" class="btn btn-outline-primary btn-block">Buscar</button>
+                      <a href="#" id="editarMenu" class="btn btn-outline-primary btn-block">Editar</a>
                     </div>
                   </div>
                 </form>
@@ -311,59 +308,75 @@
             </div>
           </div>
           <!-- Contenido -->
-          <div class="col-md-12">
+          <!-- Contenido -->
+          <div class="col-md-4">
             <div class="card">
               <div class="card-header">
-                <a class="btn btn-primary float-left mb-0" href="noticias-agregar.html" role="button">Añadir nuevo</a>
-                <a class="btn btn-outline-primary float-left mb-0 ml-2" href="noticias-eliminado.html" role="button">Eliminados</a>
-                <nav class="float-right">
-                  <ul class="pagination mb-0">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+                Agregar Item
               </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                  <label>Imagen de item</label>
+                    <div class="custom-file">
+                      <div class="sedapal-imagen-destacada-elegida mb-1" style="background-image: url(dist/img/);"></div>
+                      <a href="#" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#agregarMultimediaModal">Subir imagen</a>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Título de item</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Enlace de item</label>
+                    <input class="form-control" type="text" placeholder="URL">
+                    <button type="button" class="btn btn-outline-primary mt-1 btn-block" data-toggle="modal" data-target="#agregarPaginaModal">Elegir página</button>
+                  </div>
+                  <div class="form-group">
+                    <label>¿Como se abrira?</label>
+                    <select class="form-control">
+                      <option>Nueva pestaña</option>
+                      <option>Misma pestaña</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-secondary">Actualizar</button>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header">
+                Lista de categorías
+              </div> 
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
                       <tr>
+                        <th scope="col">Imagen</th>
                         <th scope="col">Título</th>
-                        <th scope="col">Categoría</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Fecha de creación</th>
-                        <th scope="col">Fecha de publicación</th>
-                        <th scope="col">Autor</th>
+                        <th scope="col">Enlace</th>
                         <th scope="col">Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                        <td>Noticias de Sepadal</td>
-                        <td>Publicado</td>
-                        <td>2020-06-15 23:34</td>
-                        <td>2020-06-15 23:34</td>
-                        <td>Usuario</td>
-                        <td>
+                        <td class="align-middle"><span class="sedapal-img-banners" style="background-image: url(dist/img/default-150x150.png);"></span></td>
+                        <td class="align-middle">Sedapal</td>
+                        <td class="align-middle"><a href="#" target="_blank">http://sedapal.marcocp.digital/</a></td>
+                        <td class="align-middle">
                           <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle btn-sm" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Acciones
                             </button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="#">Editar</a>
-                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Eliminar</a>
+                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#bannerModal">Eliminar</a>
                             </div>
                           </div>
                         </td>
@@ -424,6 +437,181 @@
 </div>
 <!-- ./wrapper -->
 
+<!-- Modals -->
+  <div class="modal fade" id="agregarPaginaModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar enlace de página</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-2 mb-0">
+                <select class="custom-select">
+                  <option value="">Filtrar por categoría</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6 mb-0">
+                <input type="text" class="form-control" placeholder="¿Que noticia o página buscas?">
+              </div>
+              <div class="form-group col-md-2 mb-0">
+                <select class="custom-select">
+                  <option value="">Estado</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2 mb-0">
+                <button type="submit" class="btn btn-outline-primary btn-block">Buscar</button>
+              </div>
+            </div>
+          </form>
+          <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Título</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                        <td>Noticias de Sepadal</td>
+                        <td>Publicado</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-primary">Elegir</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eliminarMultimediaModal">Agregar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal de Medios -->
+  <div class="modal fade" id="agregarMultimediaModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar imagen destacada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="container-fluid">
+            <div class="row">
+              <div class="col-md-2">
+                <label class="sedapal-elegir-multimedia-contenedor">
+                  <input type="radio" name="elegirMultimedia">
+                  <span class="sedapal-elegir-multimedia" style="background-image: url(dist/img/default-150x150.png);"></span>
+                </label>
+              </div>
+              <div class="col-md-2">
+                <label class="sedapal-elegir-multimedia-contenedor">
+                  <input type="radio" name="elegirMultimedia">
+                  <span class="sedapal-elegir-multimedia" style="background-image: url(dist/img/default-150x150.png);"></span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <form>
+            <div class="form-row">
+              <div class="col-md-8">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input">
+                  <label class="custom-file-label">Subir imagen</label>
+                </div>                
+              </div>
+              <div class="col-md-4">
+                  <button type="button" class="btn btn-primary">Subir</button>                
+              </div>
+            </div>
+          </form>
+          <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eliminarMultimediaModal">Agregar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal de URLS -->
+  <div class="modal fade" id="agregarPaginaModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar enlace de página</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-2 mb-0">
+                <select class="custom-select">
+                  <option value="">Filtrar por categoría</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6 mb-0">
+                <input type="text" class="form-control" placeholder="¿Que noticia o página buscas?">
+              </div>
+              <div class="form-group col-md-2 mb-0">
+                <select class="custom-select">
+                  <option value="">Estado</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2 mb-0">
+                <button type="submit" class="btn btn-outline-primary btn-block">Buscar</button>
+              </div>
+            </div>
+          </form>
+          <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Título</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                        <td>Noticias de Sepadal</td>
+                        <td>Publicado</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-primary">Elegir</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eliminarMultimediaModal">Agregar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
@@ -432,5 +620,6 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
 </body>
 </html>

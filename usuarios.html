@@ -9,7 +9,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <!-- Página de CMS que se esta editando -->
-  <title>Sepadal | Noticias</title>
+  <title>Sepadal | Usuarios</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -74,15 +74,15 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="noticias.html" class="nav-link active">
+          <li class="nav-item has-treeview">
+            <a href="noticias.html" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>Noticias</p>
               <i class="right fas fa-angle-left"></i>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="noticias.html" class="nav-link active">
+                <a href="noticias.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista de Noticias</p>
                 </a>
@@ -205,8 +205,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-sliders-h"></i>
               <p>
                 Administrador
@@ -220,7 +220,7 @@
                   <p>Enlaces de inicio</p>
                 </a>
               </li>
-              <li class="nav-item has-treeview">
+              <li class="nav-item has-treeview menu-open">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>
@@ -228,9 +228,9 @@
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                <ul class="nav nav-treeview" style="display: block;">
                   <li class="nav-item">
-                    <a href="usuarios.html" class="nav-link">
+                    <a href="usuarios.html" class="nav-link active">
                       <i class="far fa-dot-circle nav-icon"></i>
                       <p>Usuarios</p>
                     </a>
@@ -266,12 +266,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Noticias</h1>
+            <h1 class="m-0 text-dark">Usuarios</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Escritorio</a></li>
-              <li class="breadcrumb-item active">Noticias</li>
+              <li class="breadcrumb-item active">Usuarios</li>
             </ol>
           </div><!-- /.col -->       
         </div><!-- /.row -->
@@ -289,17 +289,21 @@
               <div class="card-body">
                 <form>
                   <div class="form-row">
+                    <div class="form-group col-md-6 mb-0">
+                      <input type="text" class="form-control" placeholder="¿Que usuario buscas?">
+                    </div>
                     <div class="form-group col-md-2 mb-0">
                       <select class="custom-select">
-                        <option value="">Filtrar por categoría</option>
+                        <option value="">Tipo</option>
+                        <option value="">Administrador</option>
+                        <option value="">Editor</option>
+                        <option value="">Usuario</option>
                       </select>
                     </div>
-                    <div class="form-group col-md-6 mb-0">
-                      <input type="text" class="form-control" placeholder="¿Que noticia buscas?">
-                    </div>
                     <div class="form-group col-md-2 mb-0">
                       <select class="custom-select">
-                        <option value="">Estado</option>
+                        <option value="">Área</option>
+                        <option value="">Marketing</option>
                       </select>
                     </div>
                     <div class="form-group col-md-2 mb-0">
@@ -314,8 +318,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <a class="btn btn-primary float-left mb-0" href="noticias-agregar.html" role="button">Añadir nuevo</a>
-                <a class="btn btn-outline-primary float-left mb-0 ml-2" href="noticias-eliminado.html" role="button">Eliminados</a>
+                <a class="btn btn-primary float-left mb-0" href="usuarios-agregar.html" role="button">Añadir nuevo</a>
                 <nav class="float-right">
                   <ul class="pagination mb-0">
                     <li class="page-item disabled">
@@ -339,23 +342,19 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">Título</th>
-                        <th scope="col">Categoría</th>
-                        <th scope="col">Estado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Área</th>
                         <th scope="col">Fecha de creación</th>
-                        <th scope="col">Fecha de publicación</th>
-                        <th scope="col">Autor</th>
                         <th scope="col">Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                        <td>Noticias de Sepadal</td>
-                        <td>Publicado</td>
+                        <td>Jose Perez</td>
+                        <td>Administrador</td>
+                        <td>Marketing</td>
                         <td>2020-06-15 23:34</td>
-                        <td>2020-06-15 23:34</td>
-                        <td>Usuario</td>
                         <td>
                           <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle btn-sm" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
